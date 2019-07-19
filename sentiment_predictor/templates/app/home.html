@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment Analyser </title>
+	<link href="{% static 'stylesheet.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<form method="POST" novalidate>
+	{% csrf_token %}
+<div class="background">
+  <div class="transbox">
+  	<div class="inner_div">
+  		<p class="sen">SENTIMENT ANALYSER</p>
+    	<p class="rev">Enter a review:</p><br>
+    	<input type="text" name="review"  ><br><br>
+ 		<button type="submit">submit</button><br><br>
+ 		<p class="rev">{{ insert_me  }}</p>
+ 	</div>
+  </div>
+</form>
+</body>
+</html>
+</div>
